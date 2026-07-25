@@ -1,14 +1,12 @@
-﻿using System.Xml.Linq;
-
-namespace ERP.Domain.Entities
+﻿namespace ERP.Domain.Entities
 {
-    internal class Estoque
+    public class Estoque
     {
         public Guid Id { get; private set; }
 
-        private Produto produto;
-        private Localizacao localizacao;
-        private int quantidade = 0;
-        public bool ativo = true;
+        public Produto Produto { get; private set; } = null!;
+        public Localizacao Localizacao { get; private set; } = null!;
+        public int Quantidade { get; private set; }
+        public bool Ativo { get; private set; } = true;
     }
 }
