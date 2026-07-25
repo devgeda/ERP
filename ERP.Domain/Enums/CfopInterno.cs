@@ -27,9 +27,9 @@ namespace ERP.Domain.Enums
         public static readonly CfopInterno Cfop1904 = new("Retorno de remessa para venda fora do estabelecimento", "Principais CFOPs Internos de Entrada (Dentro do Estado)", "1904");
         public static readonly CfopInterno Cfop1949 = new("Outra entrada de mercadoria ou prestação de serviço não especificada", "Principais CFOPs Internos de Entrada (Dentro do Estado)", "1949");
 
-        public string Descricao { get; private set; } = string.Empty;
-        public string Grupo { get; private set; } = string.Empty;
-        public string Codigo { get; private set; } = string.Empty;
+        public string Descricao { get; } = string.Empty;
+        public string Grupo { get; } = string.Empty;
+        public string Codigo { get; } = string.Empty;
 
         private CfopInterno(string descricao, string grupo, string codigo) : base(descricao, codigo)
         {

@@ -4,7 +4,7 @@ namespace ERP.Domain.Entities
 {
     public class Categoria
     {
-        public Guid Id { get; set; }
+        public Guid Id { get; private set; }
 
         public string Nome { get; private set; } = string.Empty;
         public bool Ativo { get; private set; } = true;
@@ -28,14 +28,14 @@ namespace ERP.Domain.Entities
 
         public void Ativar(bool ativo)
         {
-           // if (Ativo) throw new CategoriaJaAtivoException();
+            if (Ativo) throw new CategoriaJaAtivoException();
 
             Ativo = ativo;
         }
 
         public void Desativar(bool ativo)
         {
-           // if (!Ativo) throw new CategoriaJaInativoException();
+            if (!Ativo) throw new CategoriaJaInativoException();
 
             Ativo = ativo;
         }
